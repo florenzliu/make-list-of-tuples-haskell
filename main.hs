@@ -4,8 +4,8 @@ iterateB _ [] = []
 iterateB x (y:ys) = (x,y) : iterateB x ys
 
 -- iterate elements in list a
-makeTuples :: [a] -> [b] -> [(a,b)]
-makeTuples [] _ = []
-makeTuples (x:xs) ys = iterateB x ys ++ makeTuples xs ys
+func :: [a] -> [b] -> [(a,b)]
+func [] _ = []
+func (x:xs) ys = iterateB x ys ++ func xs ys
 
---makeTuples [1,2,3] [4,5]
+--func [1,2,3] [4,5]
